@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -48,7 +49,17 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             SizedBox(
+             Container(
+               decoration: const BoxDecoration(
+                 boxShadow: [
+                   BoxShadow(
+                       color: Colors.grey,
+                       blurRadius: 5,
+                       spreadRadius: 1,
+                       offset: Offset(4, 4)
+                   ),
+                 ],
+               ),
               height: 350,
               width: double.infinity,
               child: ClipRRect(
